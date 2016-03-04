@@ -8,3 +8,4 @@ function SellersController($scope, AppResource, $location) {
 	getSellersPromise.success(function(sellers){
 		$scope.sellers = sellers;
 	});
+});
