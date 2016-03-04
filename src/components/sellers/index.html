@@ -1,19 +1,53 @@
-<div class="col-md-12"> Hér ætti að birtast listi af seljendum - TODO: útfæra það!
 
+<div class="row">
+	<div class = "cold-md-4">
+		<h1>Söluaðilar</h1>
+	</div>
+
+</div>
+<div class= "row">
+	<div class="col-md-8"></div>
+	<div class="col-md-4">
+		<button type="button" class="btn btn-primary" ng-click="addSeller('/seller')">Add Seller</button>
+		<p>
+	</div>
 </div>
 
 <div class="row"> 
-	<div class="col-md-4">
-		<ul ng-repeat= "seller in sellers">
-	        <li> {{seller.name}}</li>
-	    </ul>
+	<div class="col-md-12">
+		<table class="table table-hover">
+			<tr table-sort="Sellers" class="info">
+				<th data-columnName="Sellers">Nafn Seljanda</th>
+      			<th data-columnName="Sellers">Flokkur</th>
+      		</tr>
+  			<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">
+    			<td><a ng-href="#/seller/{{seller.id}}"> {{seller.name}}</a></td>
+    			<td>{{ seller.category}}</td>
+  			</tr>
+		</table>
 	</div>
-	<div class="col-md-4">
-		<ul ng-repeat= "seller in sellers">
-	        <li> {{seller.category}}</li>
-	    </ul>
-	</div>
-	<div class="col-md-4"></div>
 
 </div>
 
+
+
+
+ <!-- a) For each column that should be sortable, add the data-columnName attribute,
+ * with the value of the sort expression: 
+ 
+ <tr table-sort="Name">
+ *     <th data-columnName="Name">Name</th>
+ *     < etc. for each column in the table ;
+  </tr>
+ *
+ *  b) in your ng-repeat for the table rows, ensure you are using orderBy filter
+ * with predicate and reverse (which are scope variables created by this
+ * directive): 
+ *
+ * <tr ng-repeat="stuff in stuffz | orderBy:predicate:reverse">
+ *
+ <tr table-sort="-Name">
+
+ * If the sort order should be reversed initially, place a minus sign in front of
+ *      the name of the default column: -->
+ 

@@ -5,6 +5,12 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
 	$routeProvider.when("/", {
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
+	}).when("/seller/", {
+		controller: "AddNewSellerController",
+		templateUrl: "components/sellers/addseller.html"
+	}).when("/seller/:id", {
+		controller: "EditSellerController",
+		templateUrl: "components/sellers/editseller.html"
 	});
 });
 
@@ -24,6 +30,7 @@ function AppResource() {
 	// Note that this is only a helper to generate
 	// mock data, and is not a part of our business logic!
 	function createSeller(id, name, category, img) {
+		console.log('create seller1');
 		return {
 			id: id,
 			name: name,
@@ -119,12 +126,17 @@ function AppResource() {
 		// defined above. A proper implementation will talk to
 		// an API to load/save data.
 		getSellers: function getSellers() {
+			console.log(mockSellers);
 			return mockHttpPromise(mockResource.successLoadSellers, mockSellers);
 		},
 
 		addSeller: function addSeller(seller) {
+			console.log('add seller, AppResource');
+			console.log(seller);
 			if (mockResource.successAddSeller) {
+				console.log('sucess, addSeller, AppResource');
 				mockSellers.push(seller);
+				console.log(mockSellers);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
 		},
@@ -142,15 +154,19 @@ function AppResource() {
 		},
 
 		getSellerDetails: function(id) {
+			console.log('getSellerDetails, id: ', id);
 			var seller;
 			for (var i = 0; i < mockSellers.length; ++i) {
-				if (mockSellers[i].id === id) {
+				console.log(typeof(mockSellers[i].id));
+				if (mockSellers[i].id === parseInt(id)) {
+					console.log('break');
 					seller = mockSellers[i];
 					break;
 				}
 			}
 
 			if (seller) {
+				console.log('http promise');
 				return mockHttpPromise(mockResource.successLoadSellerDetails, seller);
 			} else {
 				return mockHttpPromise(false, null);
@@ -192,8 +208,55 @@ function AppResource() {
 });
 "use strict";
 
+angular.module("project3App").controller("AddNewSellerController",
+function AddNewSellerController($scope, $location, AppResource) {
+	// TODO: load data from AppResource! Also, add other methods, such as to
+	// add/update sellers etc.
+	var seller_obj;
+	$scope.addSeller = function addSeller(){
+		seller_obj = {
+			id: $scope.id,
+			name : $scope.name,
+			category: $scope.category,
+			imagePath: $scope.imagePath
+		};
+		AppResource.addSeller(seller_obj).success(function(seller){
+			console.log("success");
+		});
+	};
+	$scope.back = function back(){
+		$location.path("/");
+	};
+});
+"use strict";
+
+angular.module("project3App").controller("EditSellerController",
+function EditSellerController($scope, $location, $routeParams, AppResource) {
+	// TODO: load data from AppResource! Also, add other methods, such as to
+	// add/update sellers etc.
+	console.log($routeParams.id);
+	$scope.seller = "";
+	//console.log(typeof($routeParams.id));	
+	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
+	getSellerDetailsPromise.success(function(seller){
+		console.log(seller);
+		$scope.seller = seller;
+	});
+
+	$scope.editSeller = function editSeller(){
+		console.log($scope.seller);
+		AppResource.updateSeller($scope.seller.id, $scope.seller).success(function(seller){
+			console.log("success");
+		});
+	};
+	$scope.back = function back(){
+		$location.path("/");
+	};	
+});
+"use strict";
+
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource) {
+function SellersController($scope, AppResource, $location) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 	var getSellersPromise = AppResource.getSellers();
@@ -201,6 +264,11 @@ function SellersController($scope, AppResource) {
 		console.log(sellers);
 		$scope.sellers = sellers;
 	});
+
+	$scope.addSeller = function addSeller(path){
+		console.log('addSeller button');
+		$location.path(path);
+	};
 
 });
 "use strict";
