@@ -20,17 +20,27 @@
 
 
 <div class="row"> 
-	<div class="col-md-12">
-		<table class="table table-hover">
-			<tr table-sort="Products" class="info">
-				<th data-columnName="Products">Allar Vörur</th>
-				<th date-columnName="Products">Top 10</th>
-      		</tr>
-  			<tr ng-repeat="product in products | orderBy:predicate:reverse">
-    			<td><a ng-href=""> {{product.name}}</a></td>
-    			<td><a ng-href=""> {{product.quantitySold}}</a></td>
-  			</tr>
-		</table>
+	<div class="col-md-12" style="padding: 50px;">
+		<form name="outerForm" class="tab-form-demo">
+		    <uib-tabset active="activeForm">
+		      <uib-tab index="0" heading="Allar Vörur">
+		        <ng-form name="nestedForm">
+		          <div class="form-group">
+		            <label>Allar Vörur</label>
+		            	<ul ng-repeat="product in products | orderBy:predicate:reverse">
+		    				<li><a ng-href=""> {{product.name}}</a></li>
+		  				</ul>
+		          </div>
+		        </ng-form>
+		      </uib-tab>
+		      <uib-tab index="1" heading="Top 10">
+		        	<ul ng-repeat="product in products | orderBy:predicate:reverse">
+		    			<li><a ng-href=""> {{product.quantitySold}}</a></li>
+		  			</ul>
+		      </uib-tab>
+		    </uib-tabset>
+  		</form>
 	</div>
 </div>
 
+ 
