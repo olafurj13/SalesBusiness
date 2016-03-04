@@ -8,7 +8,7 @@
 <div class= "row">
 	<div class="col-md-8"></div>
 	<div class="col-md-4">
-		<button type="button" class="btn btn-primary" ng-click="addSeller('/seller')">Add Seller</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="addSeller('/seller')">Bæta við</button>
 		<p>
 	</div>
 </div>
@@ -17,8 +17,12 @@
 	<div class="col-md-12">
 		<table class="table table-hover">
 			<tr table-sort="Sellers" class="info">
-				<th data-columnName="Sellers">Nafn Seljanda</th>
-      			<th data-columnName="Sellers">Flokkur</th>
+				<th data-columnName="Sellers" >Nafn Seljanda
+					<i class="glyphicon" ng-class="getIcon('username')"></i>
+				</th>
+      			<th data-columnName="Sellers">Flokkur
+      				<i class="glyphicon" ng-class="getIcon('username')"></i>
+      			</th>
       		</tr>
   			<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">
     			<td><a ng-href="#/seller/{{seller.id}}"> {{seller.name}}</a></td>

@@ -10,6 +10,10 @@ function SellersController($scope, AppResource, $location) {
 		$scope.sellers = sellers;
 	});
 
+	$scope.head = {
+        a: "Nafn Seljanda",
+        b: "Flokkur"
+    };
 	$scope.addSeller = function addSeller(path){
 		console.log('addSeller button');
 		$location.path(path);
