@@ -1,7 +1,7 @@
 "use strict";
 
-angular.module("project3App").controller("EditSellerController",
-function EditSellerController($scope, $location, $routeParams, AppResource) {
+angular.module("project3App").controller("SellerController",
+function SellerController($scope, $location, $routeParams, AppResource) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 	console.log($routeParams.id);
@@ -12,15 +12,12 @@ function EditSellerController($scope, $location, $routeParams, AppResource) {
 		console.log(seller);
 		$scope.seller = seller;
 	});
-
-	/*$scope.editSeller = function editSeller(){
-		console.log($scope.seller);
-		AppResource.updateSeller($scope.seller.id, $scope.seller).success(function(seller){
-			console.log("success");
-		});
-	};*/
+	console.log("SellerID", $routeParams.id);
+	$scope.editSeller = function editSeller(){
+		$location.path("/seller/edit/" + $routeParams.id);
+	};
 
 	$scope.back = function back(){
-		$location.path("/seller/" ,$routeParams.id);
+		$location.path("/");
 	};	
 });
