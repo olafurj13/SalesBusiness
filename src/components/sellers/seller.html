@@ -11,3 +11,18 @@
 <div>
 	<button type="button" class="btn btn-primary" ng-click="back()">Back To Sellers</button>
 </div>
+
+<div class="row"> 
+	<div class="col-md-12">
+		<table class="table table-hover">
+			<tr table-sort="Products" class="info">
+				<th data-columnName="Products">Allar Vörur</th>
+				<th date-columnName="Products">Top 10</th>
+      		</tr>
+  			<tr ng-repeat="product in products | orderBy:predicate:reverse">
+    			<td><a ng-href=""> {{product.name}}</a></td>
+    			<td><a ng-href=""> {{product.quantitySold}}</a></td>
+  			</tr>
+		</table>
+	</div>
+</div>
