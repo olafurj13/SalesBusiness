@@ -9,6 +9,9 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
 		controller: "AddNewSellerController",
 		templateUrl: "components/sellers/addseller.html"
 	}).when("/seller/:id", {
+		controller: "SellerController",
+		templateUrl: "components/sellers/seller.html"
+	}).when("/seller/edit/:id", {
 		controller: "EditSellerController",
 		templateUrl: "components/sellers/editseller.html"
 	});
