@@ -17,15 +17,13 @@
 	<div class="col-md-12">
 		<table class="table table-hover">
 			<tr table-sort="Sellers" class="info">
-				<th data-columnName="Sellers" >Nafn Seljanda
-					<i class="glyphicon" ng-class="getIcon('username')"></i>
-				</th>
-      			<th data-columnName="Sellers">Flokkur
-      				<i class="glyphicon" ng-class="getIcon('username')"></i>
-      			</th>
+
+				<th data-columnName="-Sellers">Nafn Seljanda</th>
+      			<th data-columnName="-Sellers.category">Flokkur</th>
+
       		</tr>
   			<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">
-    			<td><a ng-href="#/seller/{{seller.id}}"> {{seller.name}}</a></td>
+    			<td><a ng-href="#/seller/{{seller.id}}/"> {{seller.name}}</a></td>
     			<td>{{ seller.category}}</td>
   			</tr>
 		</table>
