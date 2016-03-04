@@ -1,1 +1,10 @@
-<div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!</div>
+<div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!
+</div>
+<div>
+	<ol ng-repeat="seller in sellers">
+		<li><a ng-href="#/seller/{{seller.id}}"> {{seller.name}}</a></li>
+	</ol>
+</div>
+<div>
+<button type="button" class="btn btn-primary" ng-click="addSeller('/seller')">Add Seller</button>
+</div>
