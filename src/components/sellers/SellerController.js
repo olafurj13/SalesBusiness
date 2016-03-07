@@ -6,11 +6,18 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 	// add/update sellers etc.
 	console.log($routeParams.id);
 	$scope.seller = "";
+	$scope.products = "";
 	//console.log(typeof($routeParams.id));	
 	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
 	getSellerDetailsPromise.success(function(seller){
 		console.log(seller);
 		$scope.seller = seller;
+	});
+
+	var getSellerProductPromise = AppResource.getSellerProducts($routeParams.id);
+	getSellerProductPromise.success(function(products){
+		console.log("product ", products);
+		$scope.products = products;
 	});
 	console.log("SellerID", $routeParams.id);
 	$scope.editSeller = function editSeller(){

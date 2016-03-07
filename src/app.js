@@ -15,4 +15,8 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
 		controller: "EditSellerController",
 		templateUrl: "components/sellers/editseller.html"
 	});
+	.when("/seller/:id/product/:id", {
+		controller: "EditSellerController",
+		templateUrl: "components/sellers/editseller.html"
+	});
 });
