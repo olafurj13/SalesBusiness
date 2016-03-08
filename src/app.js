@@ -15,4 +15,13 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
 		controller: "EditSellerController",
 		templateUrl: "components/sellers/editseller.html"
 	});
+
+
+	//$translateProvider.useStaticFilesLoader({
+	//	prefix : "lang_",
+	//	suffix: ".json"
+	//});
+
+	//$translateProvider.use("is");
+
 });
