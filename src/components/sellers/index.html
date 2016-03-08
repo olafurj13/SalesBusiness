@@ -16,11 +16,9 @@
 <div class="row"> 
 	<div class="col-md-12">
 		<table class="table table-hover">
-			<tr table-sort="Sellers" class="info">
-
-				<th data-columnName="-Sellers">Nafn Seljanda</th>
-      			<th data-columnName="-Sellers.category">Flokkur</th>
-
+			<tr table-sort="name" class="info">
+				<th data-columnName="name">Nafn Seljanda</th>
+      			<th data-columnName="category">Flokkur</th>
       		</tr>
   			<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">
     			<td><a ng-href="#/seller/{{seller.id}}/"> {{seller.name}}</a></td>

@@ -23,11 +23,11 @@ function EditSellerController($scope, $location, $routeParams, AppResource, cent
 		console.log(updatedSeller_obj);
 		console.log(typeof updatedSeller_obj.name);
 		if(updatedSeller_obj.name === ""){
-			centrisNotify.error("sellers.Messages.LoadFailed");
+			centrisNotify.error("editseller.Messages.MissingName", "æjæj");
 		} else if(updatedSeller_obj.category === ""){
-			centrisNotify.error("category");
+			centrisNotify.error("editseller.Messages.MissingCategory");
 		} else if(updatedSeller_obj.imagePath === ""){
-			centrisNotify.error("imagePath");
+			centrisNotify.error("editseller.Messages.MissingImage");
 		} else {
 			console.log("else");
 			AppResource.updateSeller($scope.seller.id, updatedSeller_obj).success(function(seller){

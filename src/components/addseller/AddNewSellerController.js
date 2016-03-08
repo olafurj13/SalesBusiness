@@ -24,9 +24,9 @@ function AddNewSellerController($scope, $location, AppResource, centrisNotify) {
 			imagePath: $scope.imagePath
 		};
 		if(typeof seller_obj.name === 'undefined'){
-			centrisNotify.error("sellers.Messages.LoadFailed");
+			centrisNotify.error("addseller.Messages.MissingName");
 		} else if(typeof seller_obj.category === 'undefined'){
-			centrisNotify.error("category");
+			centrisNotify.error("addseller.Messages.MissingCategory");
 		} else if(typeof seller_obj.imagePath === 'undefined'){
 			centrisNotify.error("imagePath");
 		} else {
