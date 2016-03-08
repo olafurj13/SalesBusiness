@@ -45,6 +45,7 @@ function AppResource() {
 	];
 
 	var nextID = 5;
+	var nextIDproduct = 23;
 
 	var mockProducts = [
 		createProduct(1,  1, "Ullarvettlingar",  1899, 500, 12, "http://i.imgur.com/MZOmRnH.jpg"),
