@@ -12,15 +12,14 @@ function EditSellerController($scope, $location, $routeParams, AppResource) {
 		console.log(seller);
 		$scope.seller = seller;
 	});
-
-	/*$scope.editSeller = function editSeller(){
+	$scope.editSeller = function editSeller(){
 		console.log($scope.seller);
 		AppResource.updateSeller($scope.seller.id, $scope.seller).success(function(seller){
 			console.log("success");
 		});
-	};*/
+	};
 
 	$scope.back = function back(){
-		$location.path("/seller/" ,$routeParams.id);
+		$location.path("/seller/" + $routeParams.id);
 	};	
 });

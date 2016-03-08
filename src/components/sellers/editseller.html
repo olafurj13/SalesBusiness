@@ -1,12 +1,14 @@
-<div>EDIT SELLER TODO</div>
-
-<div>
-	name<input ng-model="seller.name" type="text"/>
-	category<input ng-model="seller.category" type="text"/>
-	imagePath<input ng-model="seller.imagePath" type="text"/>
-	<button type="button" class="btn btn-primary" ng-click="editSeller()">Edit Seller</button>
+<div class="row" >
+	<div class="col-md-6 col-md-offset-1">
+		Name<input ng-model="seller.name" type="text" class="form-control"/>
+		Category<input ng-model="seller.category" type="text" class="form-control"/>
+		ImagePath<input ng-model="seller.imagePath" type="text" class="form-control"/>
+		<button type="button" class="btn btn-success" style="margin:5px 0;" ng-click="editSeller()">Edit Seller</button>
+	</div>
 </div>
 
-<div>
-	<button type="button" class="btn btn-primary" ng-click="back()">Back Seller</button>
+<div class="row">
+	<div class="col-md-1 col-md-offset-5">
+		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0;">Back Seller</button>
+	</div>
 </div>

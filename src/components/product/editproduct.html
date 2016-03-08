@@ -1,0 +1,15 @@
+<div class="row" >
+	<div class="col-md-6 col-md-offset-1">
+		Name<input ng-model="products.name" type="text" class="form-control"/>
+		Price<input ng-model="products.price" type="text" class="form-control"/>
+		QuantitySold<input ng-model="products.quantitySold" type="text" class="form-control"/>
+		QuantityInStock<input ng-model="products.quantityInStock" type="text" class="form-control"/>
+		ImagePath<input ng-model="products.imagePath" type="text" class="form-control"/>
+		<button type="button" class="btn btn-success" style="margin:5px 0;" ng-click="editProduct()">Edit Product</button>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-1 col-md-offset-5">
+		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0;">Back Seller</button>
+	</div>
+</div>

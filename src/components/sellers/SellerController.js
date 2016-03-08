@@ -27,5 +27,12 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 	$scope.back = function back(){
 		$location.path("/");
 	};
-	
+	$scope.Imagechange = function(id){
+		$location.path("/seller/" + $routeParams.id + "/product/" + id);
+	};
+	$scope.addProduct = function addProduct(){
+		console.log("ADDAPRODUCT");
+		$location.path("/seller/" + $routeParams.id + "/addproduct");
+	};
+
 });

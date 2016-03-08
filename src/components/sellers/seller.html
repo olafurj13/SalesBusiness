@@ -1,28 +1,49 @@
-<div>SELLER TODO</div>
 
-<div>
+<div class= "row">
+	<div class = "col-md-3 ">
+		<img src="{{seller.imagePath}}" class="img-responsive" alt="Responsive image"/>
+	</div>
 
-</div>
-	<img src="{{seller.imagePath}}"/>
-<div>
-	{{seller}} 	<button type="button" class="btn btn-primary" ng-click="editSeller()">Edit Sellers</button>
+	<div class="col-md-3">
+		<ul class="list-unstyled">
+		    <li class="text-primary";><H4>{{seller.name}}</H4></li>
+		    <li class="text-primary"><H4>{{seller.category}}</H4></li>
+		</ul>
+	</div>
+
+	<div class="col-md-2 col-md-offset-4">
+		<button type="button" class="btn btn-warning" ng-click="addProduct()" style="margin:5px 0;">Add Product</button>
+		<button type="button" class="btn btn-warning" ng-click="editSeller()" style="margin:5px 0;">Edit Seller</button>
+		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0;">Back To Sellers</button>
+	</div>
+		
 </div>
 
-<div>
-	<button type="button" class="btn btn-primary" ng-click="back()">Back To Sellers</button>
-</div>
 
 <div class="row"> 
-	<div class="col-md-12">
-		<table class="table table-hover">
-			<tr table-sort="Products" class="info">
-				<th data-columnName="Products">Allar Vörur</th>
-				<th date-columnName="Products">Top 10</th>
-      		</tr>
-  			<tr ng-repeat="product in products | orderBy:predicate:reverse">
-    			<td><a ng-href=""> {{product.name}}</a></td>
-    			<td><a ng-href=""> {{product.quantitySold}}</a></td>
-  			</tr>
-		</table>
+	<div class="col-md-12" style="padding: 50px;">
+		<form name="outerForm" class="tab-form-demo">
+		    <uib-tabset active="activeForm">
+		      <uib-tab index="0" heading="Allar Vörur">
+		        <ng-form name="nestedForm">
+		          <div class="form-group">
+		            	<div class= "col-md-3" ng-repeat="product in products | orderBy:predicate:reverse">
+		    					<img src="{{product.imagePath}}" class="img-responsive" alt="Responsive image" ng-click="Imagechange(product.id)"/>
+		    					<a style="float:left;"class="text-primary"> {{product.name}}</a>
+		    					<a style="float:right;"class="text-primary"> {{product.price}}</a>
+		  					</ul>
+		            	</div>
+		          </div>
+		        </ng-form>
+		      </uib-tab>
+		      <uib-tab index="1" heading="Top 10">
+		        	<ul ng-repeat="product in products | orderBy:predicate:reverse">
+		    			<li><a ng-href=""> {{product.quantitySold}}</a></li>
+		  			</ul>
+		      </uib-tab>
+		    </uib-tabset>
+  		</form>
 	</div>
 </div>
+
+ 
