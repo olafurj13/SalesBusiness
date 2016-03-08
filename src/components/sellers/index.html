@@ -1,14 +1,13 @@
-
+<div ng-include="'src/components/NavBar-Eng-Isl/NavBar.html'"></div>
 <div class="row">
 	<div class = "cold-md-4">
 		<h1 translate = "sellers.Title"></h1>
 	</div>
-
 </div>
 <div class= "row">
 	<div class="col-md-8"></div>
 	<div class="col-md-4">
-		<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="addSeller('/seller')">Bæta við</button>
+		<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="addSeller('/seller')" translate = "sellers.AddButton"></button>
 		<p>
 	</div>
 </div>
@@ -18,8 +17,8 @@
 		<table class="table table-hover">
 			<tr table-sort="Sellers" class="info">
 
-				<th data-columnName="-Sellers">Nafn Seljanda</th>
-      			<th data-columnName="-Sellers.category">Flokkur</th>
+				<th data-columnName="-Sellers" translate = "sellers.Name"></th>
+      			<th data-columnName="-Sellers.category" translate = "sellers.Category"></th>
 
       		</tr>
   			<tr ng-repeat="seller in sellers | orderBy:predicate:reverse">

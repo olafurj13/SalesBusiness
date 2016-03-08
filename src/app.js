@@ -16,15 +16,10 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 		templateUrl: "components/sellers/editseller.html"
 	});
 
-
-	//$translateProvider.useStaticFilesLoader({
-	//	prefix : "lang_",
-	//	suffix: ".json"
-	//});
-
-	//$translateProvider.use("is");
-
-
+	$translateProvider.useStaticFilesLoader({
+		prefix : "lang_",
+		suffix: ".json"
+	});
 	$translateProvider.preferredLanguage('en');
 
 });
