@@ -16,10 +16,10 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 		templateUrl: "components/editseller/editseller.html"
 	}).when("/seller/:sellerid/product/:id", {
 		controller: "EditProductController",
-		templateUrl: "components/product/editproduct.html"
+		templateUrl: "components/product/editproduct/editproduct.html"
 	}).when("/seller/:sellerid/addproduct", {
 		controller: "AddNewProductController",
-		templateUrl: "components/product/addproduct.html"
+		templateUrl: "components/product/addproduct/addproduct.html"
 	});
 
 	$translateProvider.useStaticFilesLoader({

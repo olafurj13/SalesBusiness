@@ -7,7 +7,6 @@ function EditProductController($scope, $location, $routeParams, AppResource) {
 	console.log($routeParams.id);
 	console.log("EditProductController");
 	var productID = $routeParams.id;
-	$scope.products = "";
 	
 	var getSellerProductPromise = AppResource.getSellerProducts($routeParams.sellerid);
 	getSellerProductPromise.success(function(products){
