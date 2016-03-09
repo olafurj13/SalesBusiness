@@ -43,7 +43,10 @@ function AppResource() {
 		createSeller(3, "Sælgætisgerð Sjonna og Súsí", "Matvörur", "http://i.imgur.com/IuL474x.jpg"),
 		createSeller(4, "Leirkeraverkstæði Lomma", "Keramik", "https://upload.wikimedia.org/wikipedia/commons/6/67/Potter_at_work,_Jaura,_India.jpg")
 	];
+
+	var nextID = 5;
 	var nextIDproduct = 23;
+
 	var mockProducts = [
 		createProduct(1,  1, "Ullarvettlingar",  1899, 500, 12, "http://i.imgur.com/MZOmRnH.jpg"),
 		createProduct(1,  2, "Ullarsokkar",      2199, 488,  9, "http://i.imgur.com/0XKznD4.jpg?1"),
@@ -112,12 +115,9 @@ function AppResource() {
 		},
 
 		addSeller: function addSeller(seller) {
-			console.log('add seller, AppResource');
-			console.log(seller);
 			if (mockResource.successAddSeller) {
-				console.log('sucess, addSeller, AppResource');
+				seller.id = nextID++;
 				mockSellers.push(seller);
-				console.log(mockSellers);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
 		},
@@ -169,17 +169,24 @@ function AppResource() {
 		addSellerProduct: function addSellerProduct(id, product) {
 			var success = false;
 			if (mockResource.successAddSellerProduct) {
+				console.log("True");
+				console.log(id);
+				console.log(mockSellers);
+				id = parseInt(id,10);
 				var seller = _.find(mockSellers, function(o){ return o.id === id;});
+				console.log(seller);
 				if (seller) {
+					console.log("Seller er true" + "-----" + product);
 					success = true;
-					product.id = nextIDproduct++;
+					product.id = ++nextIDproduct;
 					mockProducts.push({
 						id: seller.id,
 						product: product
 					});
+
 				}
 			}
-
+			console.log("HEEEEEEEEEEEEEEEE");
 			return mockHttpPromise(success, product);
 		},
 		updateProduct: function(id, product) {

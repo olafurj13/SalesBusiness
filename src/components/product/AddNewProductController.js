@@ -4,7 +4,12 @@ angular.module("project3App").controller("AddNewProductController",
 function AddNewProductController($scope, $location, $routeParams,AppResource) {
 	
 	var product_obj;
-	$scope.addproduct = function addproduct(){
+	console.log($routeParams.sellerid);
+	var sellerid = $routeParams.sellerid;
+	$
+
+	$scope.addProduct = function addproduct(){
+		console.log("product added");
 		product_obj = {
 			name: $scope.productName,
 			price: $scope.price,
@@ -12,7 +17,8 @@ function AddNewProductController($scope, $location, $routeParams,AppResource) {
 			quantityInStock: $scope.quantityInStock,
 			imagePath: $scope.imagePath
 		};
-		AppResource.addSellerProduct($location.sellerid, product_obj).success(function(product){
+
+		AppResource.addSellerProduct(sellerid, product_obj).success(function(product){
 			console.log("success");
 		});
 	};
