@@ -10,7 +10,7 @@ function AddNewSellerController($scope, $location, AppResource, centrisNotify) {
 	getSellersPromise.success(function(sellers){
 		sellersArray = sellers;
 	});
-
+	
 	$scope.addSeller = function addSeller(){
 		seller_obj = {
 			name : $scope.name,
