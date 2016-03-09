@@ -1,0 +1,14 @@
+{
+	"editseller" : {
+		"Name":                   "Nafn",
+		"Category":               "Flokkur",
+		"ImagePath":              "Myndalinkur",
+		"EditSeller":             "Uppfæra Seljanda",
+		"Back":                   "Til Baka",
+		"Messages" : {
+			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",
+			"MissingCategory": "Mistókst að uppfæra seljanda. Vantar flokk?",
+			"MissingImage": "Mistókst að uppfæra seljanda. Vantar mynd?"
+		}
+	}
+}

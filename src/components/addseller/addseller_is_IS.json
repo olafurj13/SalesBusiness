@@ -1,0 +1,14 @@
+{
+	"addseller" : {
+		"Name":                   "Nafn",
+		"Category":               "Flokkur",
+		"ImagePath":              "Myndalinkur",
+		"AddSeller":              "Bæta Seljanda",
+		"Back":                   "Til Baka",
+		"Messages" : {
+			"MissingName": "Mistókst að bæta við seljanda. Vantar nafn?",
+			"MissingCategory": "Mistókst að bæta við seljanda. Vantar flokk?",
+			"MissingImage": "Mistókst að bæta við seljanda. Vantar mynd?"
+		}
+	}
+}

@@ -6,7 +6,6 @@ function AddNewProductController($scope, $location, $routeParams,AppResource) {
 	var product_obj;
 	console.log($routeParams.sellerid);
 	var sellerid = $routeParams.sellerid;
-	$
 
 	$scope.addProduct = function addproduct(){
 		console.log("product added");

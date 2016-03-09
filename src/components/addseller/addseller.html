@@ -1,0 +1,19 @@
+<div ng-include="'src/components/NavBar-Eng-Isl/NavBar.html'"></div>
+<div class= "row" >
+	<div class="col-md-6 col-md-offset-1">
+		<label translate="addseller.Name"></label>
+		<input ng-model="name" type="text" class="form-control" placeholder="Ólafur Helgi Jónsson"/>
+		<label translate="addseller.Category"></label>
+		<input ng-model="category" type="text" class="form-control" placeholder="t.d Fatnaður"/>
+		<label translate="addseller.ImagePath"></label>
+		<input ng-model="imagePath" type="text" class="form-control" placeholder="www.imagepath.com"/>
+		<button type="button" class="btn btn-success" ng-click="addSeller()" style="margin:5px 0;" translate="addseller.AddSeller"></button>	
+	</div>
+
+<div class="row" >
+	<div class="col-md-1 col-md-offset-5">
+		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0;" translate="addseller.Back"></button>
+	</div>
+</div>
+
+

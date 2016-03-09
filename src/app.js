@@ -7,13 +7,13 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 		templateUrl: "components/sellers/index.html"
 	}).when("/seller/", {
 		controller: "AddNewSellerController",
-		templateUrl: "components/sellers/addseller.html"
+		templateUrl: "components/addseller/addseller.html"
 	}).when("/seller/:id", {
 		controller: "SellerController",
-		templateUrl: "components/sellers/seller.html"
+		templateUrl: "components/seller-details/seller.html"
 	}).when("/seller/edit/:id", {
 		controller: "EditSellerController",
-		templateUrl: "components/sellers/editseller.html"
+		templateUrl: "components/editseller/editseller.html"
 	}).when("/seller/:sellerid/product/:id", {
 		controller: "EditProductController",
 		templateUrl: "components/product/editproduct.html"
@@ -26,5 +26,5 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 		prefix : "lang_",
 		suffix: ".json"
 	});
-	$translateProvider.preferredLanguage('is');
+	$translateProvider.use('en');
 });

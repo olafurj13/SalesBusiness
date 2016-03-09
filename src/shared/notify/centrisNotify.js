@@ -119,6 +119,7 @@ function(toastr, toastrConfig, $translate, $rootScope) {
 
 	return {
 		success: function success(messageKey, titleKey) {
+			console.log('her i centrisNotify', titleKey);
 			notificationFunction("success", titleKey, messageKey);
 		},
 		error: function error(messageKey, titleKey) {
