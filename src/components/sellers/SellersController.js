@@ -24,6 +24,7 @@ function SellersController($scope, AppResource, $location) {
         a: "Nafn Seljanda",
         b: "Flokkur"
     };
+    
 	$scope.addSeller = function addSeller(path){
 		console.log('addSeller button');
 		$location.path(path);

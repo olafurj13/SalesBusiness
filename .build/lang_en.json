@@ -25,7 +25,9 @@
 	},
 	"sellers": {
 		"Title": "Sellers List",
-		"Name": "Name",
+		"Name": "Name of Sellers",
+		"AddButton": "Add a Seller",
+		"Category": "Category",
 		"Messages": {
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",

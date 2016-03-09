@@ -6,18 +6,12 @@ function AddNewSellerController($scope, $location, AppResource, centrisNotify) {
 	// add/update sellers etc.
 	var seller_obj;
 	var sellersArray = "";
-	$scope.showError = false;
-	$scope.doFade = false;
-	$scope.errorMessage = "";
 	var getSellersPromise = AppResource.getSellers();
 	getSellersPromise.success(function(sellers){
 		sellersArray = sellers;
 	});
 
 	$scope.addSeller = function addSeller(){
-		$scope.showError = false;
-		$scope.doFade = false;
-		$scope.showError = true;
 		seller_obj = {
 			name : $scope.name,
 			category: $scope.category,
@@ -33,6 +27,7 @@ function AddNewSellerController($scope, $location, AppResource, centrisNotify) {
 			AppResource.addSeller(seller_obj).success(function(seller){
 				console.log("success");
 				centrisNotify.success("Success","success");
+				$location.path("/");
 			}).error(function (){
 				centrisNotify.error();
 			});
