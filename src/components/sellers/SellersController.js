@@ -29,6 +29,7 @@ function SellersController($scope, AppResource, $location) {
 		console.log('addSeller button');
 		$location.path(path);
 	};
+	
 
 });
 

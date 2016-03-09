@@ -1,0 +1,18 @@
+<div ng-include="'src/components/NavBar-Eng-Isl/NavBar.html'"></div>
+<div class= "row" >
+	<div class="col-md-6 col-md-offset-1">
+		<label translate="product.Name"></label>
+		<input ng-model="productName" type="text" class="form-control" placeholder="Buxur"/>
+		<label translate="product.Price"></label>
+		<input ng-model="price" type="number" class="form-control" placeholder=" t.d. 1999"/>
+		<label translate="product.QuantatySold"></label>
+		<input ng-model="quantitySold" type="number" class="form-control" placeholder=" t.d. 200"/>
+		<label translate="product.QuantityInStock"></label>
+		<input ng-model="quantityInStock" type="number" class="form-control" placeholder=" t.d. 200"/>
+		<label translate="product.imagePath"></label>
+		<input ng-model="imagePath" type="text" class="form-control" placeholder="www.imagepath.com"/>
+		<button type="button" class="btn btn-success" ng-click="addProduct()" style="margin:5px 0; float:left;" translate="product.AddProduct"></button>
+		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0; float:right;" translate="product.BackToSeller"></button>	
+	</div>
+</div>
+
