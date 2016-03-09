@@ -1,4 +1,16 @@
 {
+	"addseller": {
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Url",
+		"AddSeller": "Add Seller",
+		"Back": "Back",
+		"Messages": {
+			"MissingName": "Failed to add seller. Is name missing?",
+			"MissingCategory": "Failed to add seller. Is category missing?",
+			"MissingImage": "Failed to add seller. Is image path missing?"
+		}
+	},
 	"editseller": {
 		"Name": "Name",
 		"Category": "Category",
@@ -56,18 +68,6 @@
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",
 			"SaveFailed": "Unfortunately we could not add a new seller"
-		}
-	},
-	"addseller": {
-		"Name": "Name",
-		"Category": "Category",
-		"ImagePath": "Image Url",
-		"AddSeller": "Add Seller",
-		"Back": "Back",
-		"Messages": {
-			"MissingName": "Failed to add seller. Is name missing?",
-			"MissingCategory": "Failed to add seller. Is category missing?",
-			"MissingImage": "Failed to add seller. Is image path missing?"
 		}
 	}
 }
