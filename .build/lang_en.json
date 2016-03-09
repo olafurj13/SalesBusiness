@@ -23,6 +23,42 @@
 			"MissingImage": "Failed to update seller. Is image path missing?"
 		}
 	},
+	"product": {
+		"Title": "Sellers List",
+		"Name": "Name of Sellers",
+		"Price": "Price",
+		"QuantatySold": "Quantaty Sold",
+		"QuantityInStock": "Quantity In Stock",
+		"imagePath": "Image Path",
+		"AddButton": "Add a Seller",
+		"AddProduct": "Add Product",
+		"EditSeller": "Edit Seller",
+		"BackToSeller": "Back To Sellers",
+		"EveryProduct": "Allar Vörur",
+		"Money": "$",
+		"Category": "Category",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of sellers",
+			"SaveSucceeded": "The seller has been added successfully",
+			"SaveFailed": "Unfortunately we could not add a new seller"
+		}
+	},
+	"sellers-detail": {
+		"Title": "Sellers List",
+		"Name": "Name of Sellers",
+		"AddButton": "Add a Seller",
+		"AddProduct": "Add Product",
+		"EditSeller": "Edit Seller",
+		"BackToSeller": "Back To Sellers",
+		"EveryProduct": "Allar Vörur",
+		"Money": "$",
+		"Category": "Category",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of sellers",
+			"SaveSucceeded": "The seller has been added successfully",
+			"SaveFailed": "Unfortunately we could not add a new seller"
+		}
+	},
 	"sellers": {
 		"Title": "Sellers List",
 		"Name": "Name of Sellers",

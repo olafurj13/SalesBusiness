@@ -7,12 +7,8 @@
 		<input ng-model="seller.category" type="text" class="form-control"/>
 		<label translate="addseller.ImagePath"></label>
 		<input ng-model="seller.imagePath" type="text" class="form-control"/>
-		<button type="button" class="btn btn-success" style="margin:5px 0;" ng-click="editSeller()" translate="editseller.EditSeller"></button>
+		<button type="button" class="btn btn-success" style="margin:5px 0; float:left;" ng-click="editSeller()" translate="editseller.EditSeller"></button>
+		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0; float:right;" translate="editseller.Back"></button>
 	</div>
 </div>
 
-<div class="row">
-	<div class="col-md-1 col-md-offset-5">
-		<button type="button" class="btn btn-primary" ng-click="back()" style="margin:5px 0;" translate="editseller.Back"></button>
-	</div>
-</div>

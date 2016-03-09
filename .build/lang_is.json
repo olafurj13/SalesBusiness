@@ -23,6 +23,42 @@
 			"MissingImage": "Mistókst að uppfæra seljanda. Vantar mynd?"
 		}
 	},
+	"product": {
+		"Title": "Seljendur",
+		"Name": "Nafn Seljanda",
+		"Price": "Verð",
+		"AddButton": "Bæta við",
+		"QuantatySold": "Magn Selt",
+		"QuantityInStock": "Magn á Lager",
+		"imagePath": "URL á mynd",
+		"AddProduct": "Bæta við vöru",
+		"EditSeller": "Laga Seljanda",
+		"BackToSeller": "Til Baka",
+		"EveryProduct": "Allar Vörur",
+		"Money": "Kr",
+		"Category": "Flokkur",
+		"Messages": {
+			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
+			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",
+			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda"
+		}
+	},
+	"sellers-detail": {
+		"Title": "Seljendur",
+		"Name": "Nafn Seljanda",
+		"AddButton": "Bæta við",
+		"AddProduct": "Bæta við vöru",
+		"EditSeller": "Laga Seljanda",
+		"BackToSeller": "Til Baka",
+		"EveryProduct": "Allar Vörur",
+		"Money": "Kr",
+		"Category": "Flokkur",
+		"Messages": {
+			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
+			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",
+			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda"
+		}
+	},
 	"sellers": {
 		"Title": "Seljendur",
 		"Name": "Nafn Seljanda",

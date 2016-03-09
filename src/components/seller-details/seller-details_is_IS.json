@@ -1,0 +1,18 @@
+{
+	"sellers-detail" : {
+		"Title":                     "Seljendur",
+		"Name":                      "Nafn Seljanda",
+		"AddButton":                 "Bæta við",
+		"AddProduct":                "Bæta við vöru",
+		"EditSeller":                "Laga Seljanda",
+		"BackToSeller":              "Til Baka",
+		"EveryProduct":              "Allar Vörur",
+		"Money":                     "Kr",
+		"Category":                  "Flokkur",
+		"Messages" : {
+			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
+			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",
+			"SaveFailed":            "Því miður tókst ekki að bæta við nýjum seljanda"
+		}
+	}
+}

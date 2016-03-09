@@ -34,6 +34,7 @@ function EditSellerController($scope, $location, $routeParams, AppResource, cent
 				centrisNotify.success("successfully edited");
 			});
 		}
+
 	};
 
 	$scope.back = function back(){
