@@ -5,12 +5,6 @@ function AddNewSellerController($scope, $location, AppResource, centrisNotify) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 	var seller_obj;
-	var sellersArray = "";
-	var getSellersPromise = AppResource.getSellers();
-	getSellersPromise.success(function(sellers){
-		sellersArray = sellers;
-	});
-	
 	$scope.addSeller = function addSeller(){
 		seller_obj = {
 			name : $scope.name,

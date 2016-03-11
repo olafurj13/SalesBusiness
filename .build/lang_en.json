@@ -11,18 +11,6 @@
 			"MissingImage": "Failed to add seller. Is image path missing?"
 		}
 	},
-	"editseller": {
-		"Name": "Name",
-		"Category": "Category",
-		"ImagePath": "Image Url",
-		"EditSeller": "Update Seller",
-		"Back": "Back",
-		"Messages": {
-			"MissingName": "Failed to update seller. Is name missing?",
-			"MissingCategory": "Failed to update seller. Is category missing?",
-			"MissingImage": "Failed to update seller. Is image path missing?"
-		}
-	},
 	"product": {
 		"Title": "Sellers List",
 		"Name": "Name of Sellers",
@@ -41,6 +29,18 @@
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",
 			"SaveFailed": "Unfortunately we could not add a new seller"
+		}
+	},
+	"editseller": {
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Url",
+		"EditSeller": "Update Seller",
+		"Back": "Back",
+		"Messages": {
+			"MissingName": "Failed to update seller. Is name missing?",
+			"MissingCategory": "Failed to update seller. Is category missing?",
+			"MissingImage": "Failed to update seller. Is image path missing?"
 		}
 	},
 	"sellers-detail": {
