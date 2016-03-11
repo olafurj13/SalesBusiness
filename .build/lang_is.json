@@ -1,4 +1,16 @@
 {
+	"editseller": {
+		"Name": "Nafn",
+		"Category": "Flokkur",
+		"ImagePath": "Myndalinkur",
+		"EditSeller": "Uppfæra Seljanda",
+		"Back": "Til Baka",
+		"Messages": {
+			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",
+			"MissingCategory": "Mistókst að uppfæra seljanda. Vantar flokk?",
+			"MissingImage": "Mistókst að uppfæra seljanda. Vantar URL á mynd?"
+		}
+	},
 	"addseller": {
 		"Name": "Nafn",
 		"Category": "Flokkur",
@@ -11,16 +23,31 @@
 			"MissingImage": "Mistókst að bæta við seljanda. Vantar mynd?"
 		}
 	},
-	"editseller": {
-		"Name": "Nafn",
+	"product": {
+		"Title": "Seljendur",
+		"Name": "Nafn Seljanda",
+		"Price": "Verð",
+		"AddButton": "Bæta við",
+		"QuantatySold": "Magn Selt",
+		"QuantityInStock": "Magn á Lager",
+		"imagePath": "URL á mynd",
+		"AddProduct": "Bæta við vöru",
+		"EditProduct": "Breyta vöru",
+		"BackToSeller": "Til Baka",
+		"EveryProduct": "Allar Vörur",
+		"Money": "Kr",
 		"Category": "Flokkur",
-		"ImagePath": "Myndalinkur",
-		"EditSeller": "Uppfæra Seljanda",
-		"Back": "Til Baka",
 		"Messages": {
-			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",
-			"MissingCategory": "Mistókst að uppfæra seljanda. Vantar flokk?",
-			"MissingImage": "Mistókst að uppfæra seljanda. Vantar URL á mynd?"
+			"MissingAName": "Mistókst að bæta við vöru. Vantar nafn?",
+			"MissingAPrice": "Mistókst að bæta við vöru. Vantar verð?",
+			"MissingAQuantatySold": "Mistókst að bæta við vöru. Vantar magn selt?",
+			"MissingAQuantityInStock": "Mistókst að bæta við vöru. Vantar magn á lager?",
+			"MissingAImage": "Mistókst að bæta við vöru. Vantar URL á mynd?",
+			"MissingEName": "Mistókst að breyta við vöru. Vantar nafn?",
+			"MissingEPrice": "Mistókst að breyta við vöru. Vantar verð?",
+			"MissingEQuantatySold": "Mistókst að breyta við vöru. Vantar magn selt?",
+			"MissingEQuantityInStock": "Mistókst að breyta við vöru. Vantar magn á lager?",
+			"MissingEImage": "Mistókst að breyta við vöru. Vantar URL á mynd?"
 		}
 	},
 	"sellers-detail": {
@@ -43,26 +70,6 @@
 		"Title": "Seljendur",
 		"Name": "Nafn Seljanda",
 		"AddButton": "Bæta við",
-		"Category": "Flokkur",
-		"Messages": {
-			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
-			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",
-			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda"
-		}
-	},
-	"product": {
-		"Title": "Seljendur",
-		"Name": "Nafn Seljanda",
-		"Price": "Verð",
-		"AddButton": "Bæta við",
-		"QuantatySold": "Magn Selt",
-		"QuantityInStock": "Magn á Lager",
-		"imagePath": "URL á mynd",
-		"AddProduct": "Bæta við vöru",
-		"EditSeller": "Laga Seljanda",
-		"BackToSeller": "Til Baka",
-		"EveryProduct": "Allar Vörur",
-		"Money": "Kr",
 		"Category": "Flokkur",
 		"Messages": {
 			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",

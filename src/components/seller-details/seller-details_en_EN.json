@@ -7,7 +7,7 @@
 		"EditSeller":                "Edit Seller",
 		"BackToSeller":              "Back To Sellers",
 		"EveryProduct":              "Allar Vörur",
-		"Money":                     "$",
+		"Money":                     "Kr",
 		"Category":                  "Category",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",

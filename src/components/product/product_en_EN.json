@@ -8,15 +8,22 @@
 		"imagePath":                 "Image Path",
 		"AddButton":                 "Add a Seller",
 		"AddProduct":                "Add Product",
-		"EditSeller":                "Edit Seller",
+		"EditProduct":                "Edit Product",
 		"BackToSeller":              "Back To Sellers",
 		"EveryProduct":              "Allar Vörur",
 		"Money":                     "$",
 		"Category":                  "Category",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of sellers",
-			"SaveSucceeded":         "The seller has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new seller"
+			"MissingAName": "Failed to make product. Is name missing?",
+			"MissingAPrice": "Failed to make product. Is price missing?",
+			"MissingAQuantatySold": "Failed to make product. Is quantatySold missing?",
+			"MissingAQuantityInStock": "Failed to make product. Is quantityInStock missing?",
+			"MissingAImage": "Failed to make product. Is image path missing?",
+			"MissingEName": "Failed to update product. Is name missing?",
+			"MissingEPrice": "Failed to update product. Is price missing?",
+			"MissingEQuantatySold": "Failed to update product. Is quantatySold missing?",
+			"MissingEQuantityInStock": "Failed to update product. Is quantityInStock missing?",
+			"MissingEImage": "Failed to update product. Is image path missing?"
 		}
 	}
 }

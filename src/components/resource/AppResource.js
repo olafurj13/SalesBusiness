@@ -195,11 +195,12 @@ function AppResource() {
 				console.log("-------!!!!!" + current + "!!!!-----");
 				if (current !== null) {
 					console.log(current);
-					current.productName    	= product.productName;
-					current.price        	= product.price;
-					current.quantitySold 	= product.quantitySold;
-					current.quantityInStock = product.quantityInStock;
-					current.imagePath 		= product.imagePath;
+					current.product.productName    	= product.productName;
+					current.product.price        	= product.price;
+					current.product.quantitySold 	= product.quantitySold;
+					current.product.quantityInStock = product.quantityInStock;
+					current.product.imagePath 		= product.imagePath;
+					console.log(current);
 				}
 			}
 			return mockHttpPromise(mockResource.successUpdateSellerProduct, product);

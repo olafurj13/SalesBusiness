@@ -1,8 +1,13 @@
 "use strict";
 
-describe("AddNewSellerController", function(AppResource) {
+describe("AddNewSellerController", function() {
 	beforeEach(module("project3App"));
 	var scope, AddNewSellerController;
+	var mockSeller = {
+		name : "a",
+		category: "a",
+		imagePath: "a"
+	};
 	var mockCentrisNotify = {
 			success: function success(message) {
 		},
@@ -15,11 +20,9 @@ describe("AddNewSellerController", function(AppResource) {
 		}
 	};
 
-	var mockService = {
 
-	}
+	beforeEach(inject(function ($rootScope, $controller, AppResource) {
 
-	beforeEach(inject(function ($rootScope, $controller) {
 		scope = $rootScope.$new();
 		AddNewSellerController = $controller('AddNewSellerController', {
 			$scope: scope,
@@ -33,15 +36,31 @@ describe("AddNewSellerController", function(AppResource) {
 		expect(scope.addSeller).toBeDefined();
 	});
 
-	it("Check if is name is undefined", function(){
-		//var check = scope.addSeller.seller_obj.name = "";
-		expect(check).toBeUndefined();
+	it("should return to index page (/)", function(){
+		spyOn(mockLocation, "path");
+		scope.back();
+		expect(mockLocation.path).toHaveBeenCalledWith("/");
 	});
 
-	// it("add seller should be added", function(){
-	// 	spyOn(mockCentrisNotify, "success");
-	// 	spyOn(mockCentrisNotify, "error");
-	// 	expect(mockCentrisNotify.success).toHaveBeenCalledWith("str1");
-	// 	expect(mockCentrisNotify.error).not.toHaveBeenCalled();
-	// });
+	it("seller should be added", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		spyOn(mockLocation, "path");
+		scope.name = "a";
+		scope.category = "a";
+		scope.imagePath = "a";
+		scope.addSeller();
+		expect(mockLocation.path).toHaveBeenCalledWith("/");
+		expect(mockCentrisNotify.success).toHaveBeenCalledWith("addseller.Messages.Success");
+	});
+
+	it("error should be defined if name is undefined", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		scope.category = "a";
+		scope.imagePath = "a";
+		scope.addSeller();
+		expect(mockCentrisNotify.error).toHaveBeenCalledWith("addseller.Messages.MissingName");
+	});
+
 });
