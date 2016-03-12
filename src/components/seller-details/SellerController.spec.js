@@ -61,5 +61,5 @@ describe("SellerController", function() {
 		scope.Imagechange(1);
 		expect(mockLocation.path).toHaveBeenCalledWith("/seller/1/product/1");
 
-	})
+	});
 });
