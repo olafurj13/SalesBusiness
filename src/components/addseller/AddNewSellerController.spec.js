@@ -20,7 +20,9 @@ describe("AddNewSellerController", function() {
 		}
 	};
 
+
 	beforeEach(inject(function ($rootScope, $controller, AppResource) {
+
 		scope = $rootScope.$new();
 		AddNewSellerController = $controller('AddNewSellerController', {
 			$scope: scope,
@@ -60,4 +62,5 @@ describe("AddNewSellerController", function() {
 		scope.addSeller();
 		expect(mockCentrisNotify.error).toHaveBeenCalledWith("addseller.Messages.MissingName");
 	});
+
 });
