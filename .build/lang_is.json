@@ -38,6 +38,8 @@
 		"Money": "Kr",
 		"Category": "Flokkur",
 		"Messages": {
+			"SuccessA": "Tókst að bæta við vöru",
+			"SuccessE": "Tókst að breyta vöru",
 			"MissingAName": "Mistókst að bæta við vöru. Vantar nafn?",
 			"MissingAPrice": "Mistókst að bæta við vöru. Vantar verð?",
 			"MissingAQuantatySold": "Mistókst að bæta við vöru. Vantar magn selt?",

@@ -11,7 +11,7 @@ describe("NavController", function() {
 	};
 	translate = {
 		  use: jasmine.createSpy('$translate.use')
-		}
+		};
 
 	beforeEach(inject(function ($rootScope, $controller, $translate, AppResource) {
 

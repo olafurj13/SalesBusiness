@@ -10,31 +10,33 @@ function AddNewProductController($scope, $location, $routeParams,AppResource, ce
 	$scope.addProduct = function addproduct(){
 		console.log("product added");
 		product_obj = {
-			name: $scope.productName,
+			productName: $scope.productName,
 			price: $scope.price,
 			quantitySold: $scope.quantitySold,
 			quantityInStock: $scope.quantityInStock,
 			imagePath: $scope.imagePath
 		};
-		if(product_obj.name === ""){
-			centrisNotify.error("product.Messages.MissingAName", "æjæj");
-		} else if(product_obj.price === ""){
+		console.log("HEEEEEEEEE",product_obj);
+		if(typeof product_obj.productName === "undefined"){
+			centrisNotify.error("product.Messages.MissingAName");
+		} else if(typeof product_obj.price === "undefined"){
 			centrisNotify.error("product.Messages.MissingAPrice");
-		}else if(product_obj.quantitySold === ""){
+		}else if(typeof product_obj.quantitySold === "undefined"){
 			centrisNotify.error("product.Messages.MissingAQuantatySold");
-		}else if(product_obj.quantityInStock === ""){
+		}else if(typeof product_obj.quantityInStock === "undefined"){
 			centrisNotify.error("product.Messages.MissingAQuantityInStock");
-		} else if(product_obj.imagePath === ""){
+		} else if(typeof product_obj.imagePath === "undefined"){
 			centrisNotify.error("product.Messages.MissingAImage");
 		} else {
 			AppResource.addSellerProduct(sellerid, product_obj).success(function(product){
-				centrisNotify.success("Success","success");
-				$location.path("/seller/" + $routeParams.sellerid);
+				centrisNotify.success("product.Messages.SuccessA");
+				$location.path("/seller/" + sellerid);
 				console.log("success");
 			});
 		}
 	};
 	$scope.back = function back(){
-		$location.path("/seller/" + $routeParams.sellerid);
+		$location.path("/seller/" + sellerid);
+	
 	};
 });
