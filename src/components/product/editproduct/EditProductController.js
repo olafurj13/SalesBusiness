@@ -22,8 +22,9 @@ function EditProductController($scope, $location, $routeParams, AppResource, cen
 	
 	$scope.editProduct = function editProduct(){
 		console.log($scope.products);
+		console.log("HEEEEEE",typeof $scope.products.name);
 		if($scope.products.name === ""){
-			centrisNotify.error("product.Messages.MissingEName", "æjæj");
+			centrisNotify.error("product.Messages.MissingEName");
 		} else if($scope.products.price === ""){
 			centrisNotify.error("product.Messages.MissingEPrice");
 		}else if($scope.products.quantitySold === ""){
@@ -35,7 +36,8 @@ function EditProductController($scope, $location, $routeParams, AppResource, cen
 		} else {
 			AppResource.updateProduct($scope.products.id, $scope.products).success(function(p){
 			console.log("success");
-			centrisNotify.success("Success","success");
+			centrisNotify.success("product.Messages.SuccessE");
+			console.log("product edited------", $scope.products);
 			$location.path("/seller/" + $routeParams.sellerid);
 			});
 		}

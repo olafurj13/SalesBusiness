@@ -14,6 +14,8 @@
 		"Money":                     "$",
 		"Category":                  "Category",
 		"Messages" : {
+			"SuccessA" : "Succesfully added seller",
+			"SuccessE" : "Succesfully edited seller",
 			"MissingAName": "Failed to make product. Is name missing?",
 			"MissingAPrice": "Failed to make product. Is price missing?",
 			"MissingAQuantatySold": "Failed to make product. Is quantatySold missing?",
