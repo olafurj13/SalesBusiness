@@ -17,7 +17,7 @@ function AddNewProductController($scope, $location, $routeParams,AppResource, ce
 			imagePath: $scope.imagePath
 		};
 		if(product_obj.name === ""){
-			centrisNotify.error("product.Messages.MissingAName", "æjæj");
+			centrisNotify.error("product.Messages.MissingAName");
 		} else if(product_obj.price === ""){
 			centrisNotify.error("product.Messages.MissingAPrice");
 		}else if(product_obj.quantitySold === ""){

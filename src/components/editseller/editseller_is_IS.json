@@ -6,6 +6,7 @@
 		"EditSeller":             "Uppfæra Seljanda",
 		"Back":                   "Til Baka",
 		"Messages" : {
+			"Success" : "Tókst að uppfæra seljanda",
 			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",
 			"MissingCategory": "Mistókst að uppfæra seljanda. Vantar flokk?",
 			"MissingImage": "Mistókst að uppfæra seljanda. Vantar mynd?"

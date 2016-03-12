@@ -6,6 +6,7 @@
 		"AddSeller":              "Bæta Seljanda",
 		"Back":                   "Til Baka",
 		"Messages" : {
+			"Success" : "Tókst að bæta við seljanda",
 			"MissingName": "Mistókst að bæta við seljanda. Vantar nafn?",
 			"MissingCategory": "Mistókst að bæta við seljanda. Vantar flokk?",
 			"MissingImage": "Mistókst að bæta við seljanda. Vantar mynd?"

@@ -1,6 +1,6 @@
 "use strict";
 
-describe("AddNewSellerController", function() {
+describe("Testing AddNewSellerController", function() {
 	beforeEach(module("project3App"));
 	var scope, AddNewSellerController;
 	var mockSeller = {
@@ -52,7 +52,7 @@ describe("AddNewSellerController", function() {
 		expect(mockCentrisNotify.success).toHaveBeenCalledWith("addseller.Messages.Success");
 	});
 
-	it("error should be defined if name is undefined", function(){
+	it("centris notify error should be displayed if name is undefined", function(){
 		spyOn(mockCentrisNotify, "success");
 		spyOn(mockCentrisNotify, "error");
 		scope.category = "a";
@@ -60,4 +60,23 @@ describe("AddNewSellerController", function() {
 		scope.addSeller();
 		expect(mockCentrisNotify.error).toHaveBeenCalledWith("addseller.Messages.MissingName");
 	});
+
+	it("centris notify error should be displayed if category is undefined", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		scope.name = "a";
+		scope.imagePath = "a";
+		scope.addSeller();
+		expect(mockCentrisNotify.error).toHaveBeenCalledWith("addseller.Messages.MissingCategory");
+	});
+
+	it("centris notify error should be displayed if category is undefined", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		scope.name = "a";
+		scope.category = "a";
+		scope.addSeller();
+		expect(mockCentrisNotify.error).toHaveBeenCalledWith("addseller.Messages.MissingImage");
+	});
+
 });

@@ -6,6 +6,7 @@
 		"EditSeller":             "Update Seller",
 		"Back":                   "Back",
 		"Messages" : {
+			"Success": "Succesfully updated seller",
 			"MissingName": "Failed to update seller. Is name missing?",
 			"MissingCategory": "Failed to update seller. Is category missing?",
 			"MissingImage": "Failed to update seller. Is image path missing?"

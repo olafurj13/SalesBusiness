@@ -29,6 +29,7 @@ module.exports = function(config) {
       'src/vendor/angular-mocks/angular-mocks.js',
       'src/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
       'src/shared/app.js',
+      'src/vendor/lodash/lodash.js',
       'src/shared/**/*.js',
       'src/app.js',
       'src/components/**/*.js'

@@ -1,3 +1,1 @@
-Þegar búið er að edita eða bæta nýjum seller inn að hann redirectist á síðuna til baka.
-Laga back takka í addseller
 
