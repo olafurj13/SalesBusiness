@@ -28,7 +28,7 @@
 		        <ng-form name="nestedForm">
 		          <div class="form-group">
 		            	<div ng-controller="SellerController">
-							<div my-customer></div>
+							<div my-customer type="allproducts"></div>
 						</div>
 		          </div>
 		        </ng-form>
@@ -36,11 +36,9 @@
 		      <uib-tab index="1" heading="Top 10">
 		        <ng-form name="nestedForm">
 		          <div class="form-group">
-		            	<div class= "col-md-3" ng-repeat="product in sortedProducts">
-		    					<img src="{{product.imagePath}}" class="img-responsive" alt="Responsive image"/>
-		    					<a style="float:left;"class="text-primary"> {{product.name}}</a>
-		    					{{product.quantitySold}}
-		            	</div>
+		            	<div ng-controller="SellerController">
+							<div my-customer type="topten"></div>
+						</div>
 		          </div>
 		        </ng-form>
 		      </uib-tab>

@@ -40,6 +40,8 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 
 }).directive("myCustomer", function() {
 	return {
-		templateUrl: 'src/components/seller-details/my-customer.html'
-	};
+    templateUrl: function(elem, attr){
+      return 'src/components/seller-details/customer-'+attr.type+'.html';
+    }
+  };
 });
