@@ -26,9 +26,9 @@ function EditSellerController($scope, $location, $routeParams, AppResource, cent
 		} else if(updatedSeller_obj.imagePath === ""){
 			centrisNotify.error("editseller.Messages.MissingImage");
 		} else {
-			console.log("else");
 			AppResource.updateSeller($scope.seller.id, updatedSeller_obj).success(function(seller){
 				centrisNotify.success("successfully edited");
+				$location.path("/seller/" + $routeParams.id);
 			});
 		}
 	};
