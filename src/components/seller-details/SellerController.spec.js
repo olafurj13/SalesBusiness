@@ -3,8 +3,15 @@
 describe("SellerController", function() {
 	// TODO: add beforeEach/describe/it/etc. functions as appropriate!
 	beforeEach(module("project3App"));
-	var scope, SellerController;
+	var scope, SellerController, mockAppResource;
 	
+	var mockCentrisNotify = {
+			success: function success(message) {
+		},
+			error: function error(message) {
+		}
+	};
+
 	var mockLocation = {
 		path: function(p) {
 		}
@@ -13,12 +20,13 @@ describe("SellerController", function() {
 	beforeEach(inject(function ($rootScope, $controller,$routeParams, AppResource) {
 
 		scope = $rootScope.$new();
+		mockAppResource = AppResource;
 		SellerController = $controller('SellerController', {
 			$scope: scope,
 			$location: mockLocation,
 			AppResource: AppResource,
-			$routeParams: {id: 1}
-			//centrisNotify: mockCentrisNotify
+			$routeParams: {id: 1},
+			centrisNotify: mockCentrisNotify
 		});
 	}));
 
@@ -60,6 +68,14 @@ describe("SellerController", function() {
 		spyOn(mockLocation, "path");
 		scope.Imagechange(1);
 		expect(mockLocation.path).toHaveBeenCalledWith("/seller/1/product/1");
-
 	});
+
+	// it("check if error in getsellerproduct works correctly", function(){
+	// 	spyOn(mockCentrisNotify, "success");
+	// 	spyOn(mockCentrisNotify, "error");
+	// 	mockAppResource.successGetSellerProducts = false;
+	// 	var a = getSellerDetailsPromise;
+	// 	expect(mockCentrisNotify.error).toHaveBeenCalledWith("product.Error");
+	// });
+
 });

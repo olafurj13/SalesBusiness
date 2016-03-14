@@ -27,10 +27,12 @@ function EditProductController($scope, $location, $routeParams, AppResource, cen
 			AppResource.updateProduct($scope.products.id, $scope.products).success(function(p){
 				centrisNotify.success("product.Messages.SuccessE");
 				$location.path("/seller/" + $routeParams.sellerid);
+			}).error(function (){
+				centrisNotify.error("product.Error");
 			});
 		}
 	};
 	$scope.back = function back(){
 		$location.path("/seller/" + $routeParams.sellerid);
-	};	
+	};
 });

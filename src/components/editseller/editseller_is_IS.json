@@ -5,6 +5,7 @@
 		"ImagePath":              "Myndalinkur",
 		"EditSeller":             "Uppfæra Seljanda",
 		"Back":                   "Til Baka",
+		"Error":                  "Eitthvað fór úrskeiðis",
 		"Messages" : {
 			"Success" : "Tókst að uppfæra seljanda",
 			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",

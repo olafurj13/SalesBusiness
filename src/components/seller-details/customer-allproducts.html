@@ -1,5 +1,5 @@
 <div class= "col-md-3" style="padding: 10px; height: 270px; width: 260px;" ng-repeat="product in products | orderBy:predicate:reverse">
-	<img src="{{product.imagePath}}" style="display: block; height: 250px; width: 250px;"class="img-responsive" alt="Responsive image"ng-click="Imagechange(product.id)"/>
+	<img src="{{product.imagePath}}" style="display: block; height: 250px; width: 250px;" class="img-responsive" alt="Responsive image"ng-click="Imagechange(product.id)"/>
 	<a style="float:left;"class="text-primary" ng-click="Imagechange(product.id)" > {{product.name}}</a>
 	<a style="float:right;"class="text-primary" ng-click="Imagechange(product.id)" > {{product.price}} <span translate="sellers-detail.Money"></span></a>
 	</ul>

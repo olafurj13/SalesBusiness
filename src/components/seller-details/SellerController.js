@@ -1,15 +1,14 @@
 "use strict";
 
 angular.module("project3App").controller("SellerController",
-function SellerController($scope, $location, $routeParams, AppResource) {
+function SellerController($scope, $location, $routeParams, AppResource, centrisNotify) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 	$scope.seller = "";
 	$scope.products = "";
 	var sortProductSold = [];
 	var p = "";
-	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
-	getSellerDetailsPromise.success(function(seller){
+	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id).success(function(seller){
 		$scope.seller = seller;
 	});
 
@@ -18,13 +17,12 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 		p = products;
 		sortProductSold = products;
 	});
-
 	for(var i = 0; i < p.length; i++){
 		if(p[i].imagePath === ""){
 			p[i].imagePath = "http://www.cib.na.cnr.it/wp-content/uploads/2014/12/no-image.png";
 		}
 	}
-
+	console.log("Allar products: ", p);
 	$scope.products = p;
 
 	$scope.editSeller = function editSeller(){
@@ -46,8 +44,8 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 
 }).directive("myCustomer", function() {
 	return {
-    templateUrl: function(elem, attr){
-      return 'src/components/seller-details/customer-'+attr.type+'.html';
-    }
-  };
+		templateUrl: function(elem, attr){
+			return 'src/components/seller-details/customer-'+attr.type+'.html';
+		}
+	};
 });

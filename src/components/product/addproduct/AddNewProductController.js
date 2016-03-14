@@ -8,13 +8,14 @@ function AddNewProductController($scope, $location, $routeParams,AppResource, ce
 
 	$scope.addProduct = function addproduct(){
 		product_obj = {
-			productName: $scope.productName,
+			name: $scope.productName,
 			price: $scope.price,
 			quantitySold: $scope.quantitySold,
 			quantityInStock: $scope.quantityInStock,
 			imagePath: $scope.imagePath
 		};
-		if(typeof product_obj.productName === "undefined"){
+		console.log(product_obj);
+		if(typeof product_obj.name === "undefined"){
 			centrisNotify.error("product.Messages.MissingAName");
 		} else if(typeof product_obj.price === "undefined"){
 			centrisNotify.error("product.Messages.MissingAPrice");
@@ -28,6 +29,8 @@ function AddNewProductController($scope, $location, $routeParams,AppResource, ce
 			AppResource.addSellerProduct(sellerid, product_obj).success(function(product){
 				centrisNotify.success("product.Messages.SuccessA");
 				$location.path("/seller/" + sellerid);
+			}).error(function (){
+				centrisNotify.error("product.Error");
 			});
 		}
 	};

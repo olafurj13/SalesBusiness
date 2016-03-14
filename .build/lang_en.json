@@ -19,6 +19,7 @@
 		"ImagePath": "Image Url",
 		"EditSeller": "Update Seller",
 		"Back": "Back",
+		"Error": "Something went wrong",
 		"Messages": {
 			"Success": "Succesfully updated seller",
 			"MissingName": "Failed to update seller. Is name missing?",
@@ -28,9 +29,9 @@
 	},
 	"product": {
 		"Title": "Sellers List",
-		"Name": "Name of Sellers",
+		"Name": "Name of Product",
 		"Price": "Price",
-		"QuantatySold": "Quantaty Sold",
+		"QuantatySold": "Quantity Sold",
 		"QuantityInStock": "Quantity In Stock",
 		"imagePath": "Image Path",
 		"AddButton": "Add a Seller",
@@ -40,6 +41,7 @@
 		"EveryProduct": "Allar Vörur",
 		"Money": "$",
 		"Category": "Category",
+		"Error": "Something went wrong",
 		"Messages": {
 			"SuccessA": "Succesfully added seller",
 			"SuccessE": "Succesfully edited seller",
@@ -65,6 +67,7 @@
 		"EveryProduct": "Allar Vörur",
 		"Money": "Kr",
 		"Category": "Category",
+		"Error": "Something went wrong",
 		"Messages": {
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",

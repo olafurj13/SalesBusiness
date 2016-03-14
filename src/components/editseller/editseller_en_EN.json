@@ -5,6 +5,7 @@
 		"ImagePath":              "Image Url",
 		"EditSeller":             "Update Seller",
 		"Back":                   "Back",
+		"Error":                  "Something went wrong",
 		"Messages" : {
 			"Success": "Succesfully updated seller",
 			"MissingName": "Failed to update seller. Is name missing?",

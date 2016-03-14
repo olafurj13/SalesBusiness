@@ -9,6 +9,7 @@
 		"EveryProduct":              "Allar Vörur",
 		"Money":                     "Kr",
 		"Category":                  "Flokkur",
+		"Error":                     "Eitthvað fór úrskeiðis",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",
