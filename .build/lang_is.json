@@ -5,6 +5,7 @@
 		"ImagePath": "Myndalinkur",
 		"AddSeller": "Bæta Seljanda",
 		"Back": "Til Baka",
+		"Error": "Eitthvað fór úrskeiðis",
 		"Messages": {
 			"Success": "Tókst að bæta við seljanda",
 			"MissingName": "Mistókst að bæta við seljanda. Vantar nafn?",

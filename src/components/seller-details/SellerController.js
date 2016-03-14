@@ -44,4 +44,10 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 		$location.path("/seller/" + $routeParams.id + "/addproduct");
 	};
 
+}).directive("myCustomer", function() {
+	return {
+    templateUrl: function(elem, attr){
+      return 'src/components/seller-details/customer-'+attr.type+'.html';
+    }
+  };
 });
