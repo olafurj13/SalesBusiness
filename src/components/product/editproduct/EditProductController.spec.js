@@ -2,7 +2,7 @@
 
 describe("EditProductController", function() {
 	beforeEach(module("project3App"));
-	var scope, EditProductController, routeParams;
+	var scope, EditProductController, routeParams, mockAppResource;
 	
 	var mockSellerID = 1;
 
@@ -20,6 +20,7 @@ describe("EditProductController", function() {
 
 	beforeEach(inject(function ($rootScope, $controller, AppResource, $routeParams) {
 		scope = $rootScope.$new();
+		mockAppResource = AppResource;
 		EditProductController = $controller('EditProductController', {
 			$scope: scope,
 			$location: mockLocation,
@@ -112,6 +113,19 @@ describe("EditProductController", function() {
 		scope.products.imagePath = "";
 		scope.editProduct();
 		expect(mockCentrisNotify.error).toHaveBeenCalledWith("product.Messages.MissingEImage");
+	});
+
+	it("centris notify error should be displayed if error function is called", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		mockAppResource.successUpdateSellerProduct = false;
+		scope.productName= "a";
+		scope.price= 20;
+		scope.quantitySold = 20;
+		scope.quantityInStock = 20;
+		scope.imagePath = "a";
+		scope.editProduct();
+		expect(mockCentrisNotify.error).toHaveBeenCalledWith("product.Error");
 	});
 });
 

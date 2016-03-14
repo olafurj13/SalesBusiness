@@ -81,7 +81,7 @@ function AppResource() {
 					fn(data);
 				}
 				return {
-					error: function f() {
+					error: function (f) {
 						if (!condition) {
 							f();
 						}
@@ -117,6 +117,7 @@ function AppResource() {
 				seller.id = nextID++;
 				mockSellers.push(seller);
 			}
+			console.log('addSeller');
 			return mockHttpPromise(mockResource.successAddSeller, seller);
 		},
 

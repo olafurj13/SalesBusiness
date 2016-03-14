@@ -2,7 +2,7 @@
 
 describe("Testing EditSellerController", function() {
 	beforeEach(module("project3App"));
-	var scope, EditSellerController, routeParams;
+	var scope, EditSellerController, routeParams, mockAppResource;
 	var mockSeller = {
 		name : "a",
 		category: "a",
@@ -22,6 +22,7 @@ describe("Testing EditSellerController", function() {
 	beforeEach(inject(function ($rootScope, $controller, $routeParams, AppResource) {
 		scope = $rootScope.$new();
 		routeParams = $routeParams;
+		mockAppResource = AppResource;
 		EditSellerController = $controller('EditSellerController', {
 			$scope: scope,
 			$location: mockLocation,
@@ -76,4 +77,17 @@ describe("Testing EditSellerController", function() {
 		scope.editSeller();
 		expect(mockCentrisNotify.error).toHaveBeenCalledWith("editseller.Messages.MissingImage");
 	});
+
+	it("error function", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		spyOn(mockLocation, "path");
+		mockAppResource.successUpdateSeller = false;
+		scope.name = "a";
+		scope.category = "a";
+		scope.imagePath = "a";
+		scope.editSeller();
+		expect(mockCentrisNotify.error).toHaveBeenCalledWith("editseller.Error");
+	});
+
 });

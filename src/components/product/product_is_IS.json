@@ -1,10 +1,10 @@
 {
 	"product" : {
 		"Title":                     "Seljendur",
-		"Name":                      "Nafn Seljanda",
+		"Name":                      "Nafn vöru",
 		"Price":                     "Verð",
 		"AddButton":                 "Bæta við",
-		"QuantatySold":               "Magn Selt",
+		"QuantatySold":              "Magn Selt",
 		"QuantityInStock":           "Magn á Lager",
 		"imagePath":                 "URL á mynd",
 		"AddProduct":                "Bæta við vöru",
@@ -13,6 +13,7 @@
 		"EveryProduct":              "Allar Vörur",
 		"Money":                     "Kr",
 		"Category":                  "Flokkur",
+		"Error":                     "Eitthvað fór úrskeiðis",
 		"Messages" : {
 			"SuccessA" : "Tókst að bæta við vöru",
 			"SuccessE" : "Tókst að breyta vöru",

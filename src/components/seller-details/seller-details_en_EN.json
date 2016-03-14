@@ -9,6 +9,7 @@
 		"EveryProduct":              "Allar Vörur",
 		"Money":                     "Kr",
 		"Category":                  "Category",
+		"Error":                     "Something went wrong",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",

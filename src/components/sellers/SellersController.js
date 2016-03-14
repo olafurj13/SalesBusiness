@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource, $location) {
+function SellersController($scope, AppResource, $location, centrisNotify) {
 
 	var getSellersPromise = AppResource.getSellers();
 	getSellersPromise.success(function(sellers){

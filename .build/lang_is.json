@@ -13,9 +13,23 @@
 			"MissingImage": "Mistókst að bæta við seljanda. Vantar mynd?"
 		}
 	},
+	"editseller": {
+		"Name": "Nafn",
+		"Category": "Flokkur",
+		"ImagePath": "Myndalinkur",
+		"EditSeller": "Uppfæra Seljanda",
+		"Back": "Til Baka",
+		"Error": "Eitthvað fór úrskeiðis",
+		"Messages": {
+			"Success": "Tókst að uppfæra seljanda",
+			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",
+			"MissingCategory": "Mistókst að uppfæra seljanda. Vantar flokk?",
+			"MissingImage": "Mistókst að uppfæra seljanda. Vantar URL á mynd?"
+		}
+	},
 	"product": {
 		"Title": "Seljendur",
-		"Name": "Nafn Seljanda",
+		"Name": "Nafn vöru",
 		"Price": "Verð",
 		"AddButton": "Bæta við",
 		"QuantatySold": "Magn Selt",
@@ -27,6 +41,7 @@
 		"EveryProduct": "Allar Vörur",
 		"Money": "Kr",
 		"Category": "Flokkur",
+		"Error": "Eitthvað fór úrskeiðis",
 		"Messages": {
 			"SuccessA": "Tókst að bæta við vöru",
 			"SuccessE": "Tókst að breyta vöru",
@@ -42,19 +57,6 @@
 			"MissingEImage": "Mistókst að breyta við vöru. Vantar URL á mynd?"
 		}
 	},
-	"editseller": {
-		"Name": "Nafn",
-		"Category": "Flokkur",
-		"ImagePath": "Myndalinkur",
-		"EditSeller": "Uppfæra Seljanda",
-		"Back": "Til Baka",
-		"Messages": {
-			"Success": "Tókst að uppfæra seljanda",
-			"MissingName": "Mistókst að uppfæra seljanda. Vantar nafn?",
-			"MissingCategory": "Mistókst að uppfæra seljanda. Vantar flokk?",
-			"MissingImage": "Mistókst að uppfæra seljanda. Vantar URL á mynd?"
-		}
-	},
 	"sellers-detail": {
 		"Title": "Seljendur",
 		"Name": "Nafn Seljanda",
@@ -65,6 +67,7 @@
 		"EveryProduct": "Allar Vörur",
 		"Money": "Kr",
 		"Category": "Flokkur",
+		"Error": "Eitthvað fór úrskeiðis",
 		"Messages": {
 			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",

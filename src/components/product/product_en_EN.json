@@ -1,18 +1,19 @@
 {
 	"product" : {
 		"Title":                     "Sellers List",
-		"Name":                      "Name of Sellers",
+		"Name":                      "Name of Product",
 		"Price":                     "Price",
-		"QuantatySold":              "Quantaty Sold",
+		"QuantatySold":              "Quantity Sold",
 		"QuantityInStock":           "Quantity In Stock",
 		"imagePath":                 "Image Path",
 		"AddButton":                 "Add a Seller",
 		"AddProduct":                "Add Product",
-		"EditProduct":                "Edit Product",
+		"EditProduct":               "Edit Product",
 		"BackToSeller":              "Back To Sellers",
 		"EveryProduct":              "Allar Vörur",
 		"Money":                     "$",
 		"Category":                  "Category",
+		"Error":                     "Something went wrong",
 		"Messages" : {
 			"SuccessA" : "Succesfully added seller",
 			"SuccessE" : "Succesfully edited seller",

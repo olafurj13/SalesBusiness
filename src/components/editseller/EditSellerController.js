@@ -27,6 +27,8 @@ function EditSellerController($scope, $location, $routeParams, AppResource, cent
 			AppResource.updateSeller($scope.seller.id, updatedSeller_obj).success(function(seller){
 				centrisNotify.success("editseller.Messages.Success");
 				$location.path("/seller/"+ parseInt($routeParams.id, 10));
+			}).error(function (){
+				centrisNotify.error("editseller.Error");
 			});
 		}
 	};
