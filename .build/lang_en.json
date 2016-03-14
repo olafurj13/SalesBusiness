@@ -1,0 +1,84 @@
+{
+	"addseller": {
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Url",
+		"AddSeller": "Add Seller",
+		"Back": "Back",
+		"Messages": {
+			"Success": "Succesfully added seller",
+			"MissingName": "Failed to add seller. Is name missing?",
+			"MissingCategory": "Failed to add seller. Is category missing?",
+			"MissingImage": "Failed to add seller. Is image path missing?"
+		}
+	},
+	"editseller": {
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Url",
+		"EditSeller": "Update Seller",
+		"Back": "Back",
+		"Messages": {
+			"Success": "Succesfully updated seller",
+			"MissingName": "Failed to update seller. Is name missing?",
+			"MissingCategory": "Failed to update seller. Is category missing?",
+			"MissingImage": "Failed to update seller. Is image path missing?"
+		}
+	},
+	"product": {
+		"Title": "Sellers List",
+		"Name": "Name of Sellers",
+		"Price": "Price",
+		"QuantatySold": "Quantaty Sold",
+		"QuantityInStock": "Quantity In Stock",
+		"imagePath": "Image Path",
+		"AddButton": "Add a Seller",
+		"AddProduct": "Add Product",
+		"EditProduct": "Edit Product",
+		"BackToSeller": "Back To Sellers",
+		"EveryProduct": "Allar Vörur",
+		"Money": "$",
+		"Category": "Category",
+		"Messages": {
+			"SuccessA": "Succesfully added seller",
+			"SuccessE": "Succesfully edited seller",
+			"MissingAName": "Failed to make product. Is name missing?",
+			"MissingAPrice": "Failed to make product. Is price missing?",
+			"MissingAQuantatySold": "Failed to make product. Is quantatySold missing?",
+			"MissingAQuantityInStock": "Failed to make product. Is quantityInStock missing?",
+			"MissingAImage": "Failed to make product. Is image path missing?",
+			"MissingEName": "Failed to update product. Is name missing?",
+			"MissingEPrice": "Failed to update product. Is price missing?",
+			"MissingEQuantatySold": "Failed to update product. Is quantatySold missing?",
+			"MissingEQuantityInStock": "Failed to update product. Is quantityInStock missing?",
+			"MissingEImage": "Failed to update product. Is image path missing?"
+		}
+	},
+	"sellers-detail": {
+		"Title": "Sellers List",
+		"Name": "Name of Sellers",
+		"AddButton": "Add a Seller",
+		"AddProduct": "Add Product",
+		"EditSeller": "Edit Seller",
+		"BackToSeller": "Back To Sellers",
+		"EveryProduct": "Allar Vörur",
+		"Money": "Kr",
+		"Category": "Category",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of sellers",
+			"SaveSucceeded": "The seller has been added successfully",
+			"SaveFailed": "Unfortunately we could not add a new seller"
+		}
+	},
+	"sellers": {
+		"Title": "Sellers List",
+		"Name": "Name of Sellers",
+		"AddButton": "Add a Seller",
+		"Category": "Category",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of sellers",
+			"SaveSucceeded": "The seller has been added successfully",
+			"SaveFailed": "Unfortunately we could not add a new seller"
+		}
+	}
+}

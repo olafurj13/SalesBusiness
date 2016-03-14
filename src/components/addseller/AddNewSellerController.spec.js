@@ -2,7 +2,7 @@
 
 describe("Testing AddNewSellerController", function() {
 	beforeEach(module("project3App"));
-	var scope, AddNewSellerController;
+	var scope, AddNewSellerController, mockAppResource;
 	var mockSeller = {
 		name : "a",
 		category: "a",
@@ -20,8 +20,12 @@ describe("Testing AddNewSellerController", function() {
 		}
 	};
 
+
+
 	beforeEach(inject(function ($rootScope, $controller, AppResource) {
+
 		scope = $rootScope.$new();
+		mockAppResource = AppResource;
 		AddNewSellerController = $controller('AddNewSellerController', {
 			$scope: scope,
 			$location: mockLocation,
@@ -78,5 +82,20 @@ describe("Testing AddNewSellerController", function() {
 		scope.addSeller();
 		expect(mockCentrisNotify.error).toHaveBeenCalledWith("addseller.Messages.MissingImage");
 	});
+
+	it("error function", function(){
+		spyOn(mockCentrisNotify, "success");
+		spyOn(mockCentrisNotify, "error");
+		spyOn(mockLocation, "path");
+		console.log("ERROR FUNCTION I ADD NEW SELLER CONTROLLER SPEC: ", mockAppResource.successAddSeller);
+		mockAppResource.successAddSeller = false;
+		console.log("ERROR FUNCTION I ADD NEW SELLER CONTROLLER SPEC: ", mockAppResource.successAddSeller);
+		scope.name = "a";
+		scope.category = "a";
+		scope.imagePath = "a";
+		scope.addSeller();
+		expect(mockLocation.path).toHaveBeenCalledWith("/");
+		expect(mockCentrisNotify.success).toHaveBeenCalledWith("addseller.Messages.Success");
+	})
 
 });

@@ -19,11 +19,10 @@ function AddNewSellerController($scope, $location, AppResource, centrisNotify) {
 			centrisNotify.error("addseller.Messages.MissingImage");
 		} else {
 			AppResource.addSeller(seller_obj).success(function(seller){
-				console.log("success");
 				centrisNotify.success("addseller.Messages.Success");
 				$location.path("/");
 			}).error(function (){
-				centrisNotify.error();
+				centrisNotify.error("addseller.Error");
 			});
 		}
 	};

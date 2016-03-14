@@ -4,7 +4,6 @@ angular.module("project3App").controller("EditSellerController",
 function EditSellerController($scope, $location, $routeParams, AppResource, centrisNotify) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
-	console.log('routeParams i EditSellerController: ', $routeParams.id);
 	$scope.seller = "";
 	var updatedSeller_obj = "";
 	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
