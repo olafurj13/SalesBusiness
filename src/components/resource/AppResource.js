@@ -110,7 +110,6 @@ function AppResource() {
 		// defined above. A proper implementation will talk to
 		// an API to load/save data.
 		getSellers: function getSellers() {
-			console.log(mockSellers);
 			return mockHttpPromise(mockResource.successLoadSellers, mockSellers);
 		},
 
@@ -135,7 +134,6 @@ function AppResource() {
 		},
 
 		getSellerDetails: function(id) {
-			console.log('getSellerDetails, id: ', id);
 			var seller;
 			for (var i = 0; i < mockSellers.length; ++i) {
 				console.log(typeof(mockSellers[i].id));
@@ -147,7 +145,6 @@ function AppResource() {
 			}
 
 			if (seller) {
-				console.log('http promise');
 				return mockHttpPromise(mockResource.successLoadSellerDetails, seller);
 			} else {
 				return mockHttpPromise(false, null);
@@ -155,7 +152,6 @@ function AppResource() {
 		},
 
 		getSellerProducts: function getSellerProducts(id) {
-			console.log('her i get seller products');
 			var products = [];
 			for (var i = 0; i < mockProducts.length; ++i) {
 				if (mockProducts[i].id === parseInt(id)) {
@@ -169,14 +165,9 @@ function AppResource() {
 		addSellerProduct: function addSellerProduct(id, product) {
 			var success = false;
 			if (mockResource.successAddSellerProduct) {
-				console.log("True");
-				console.log(id);
-				console.log(mockSellers);
 				id = parseInt(id,10);
 				var seller = _.find(mockSellers, function(o){ return o.id === id;});
-				console.log(seller);
 				if (seller) {
-					console.log("Seller er true" + "-----" + product);
 					success = true;
 					product.id = ++nextIDproduct;
 					mockProducts.push({
@@ -186,13 +177,11 @@ function AppResource() {
 
 				}
 			}
-			console.log("HEEEEEEEEEEEEEEEE");
 			return mockHttpPromise(success, product);
 		},
 		updateProduct: function(id, product) {
 			if (mockResource.successUpdateSellerProduct) {
 				var current = _.find(mockProducts, function(o){ return o.product.id === id;});
-				console.log("-------!!!!!" + current + "!!!!-----");
 				if (current !== null) {
 					console.log(current);
 					current.product.productName    	= product.productName;

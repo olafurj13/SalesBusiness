@@ -9,13 +9,11 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 	var sortProductSold = [];
 	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
 	getSellerDetailsPromise.success(function(seller){
-		console.log(seller);
 		$scope.seller = seller;
 	});
 
 	var getSellerProductPromise = AppResource.getSellerProducts($routeParams.id);
 	getSellerProductPromise.success(function(products){
-		console.log("product ", products);
 		$scope.products = products;
 		sortProductSold = products;
 	});
@@ -34,7 +32,6 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 		$location.path("/seller/" + $routeParams.id + "/product/" + id);
 	};
 	$scope.addProduct = function addProduct(){
-		console.log("ADDAPRODUCT");
 		$location.path("/seller/" + $routeParams.id + "/addproduct");
 	};
 

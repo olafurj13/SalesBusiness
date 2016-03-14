@@ -10,7 +10,6 @@ function EditSellerController($scope, $location, $routeParams, AppResource, cent
 	//console.log(typeof($routeParams.id));	
 	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
 	getSellerDetailsPromise.success(function(seller){
-		console.log(seller);
 		$scope.seller = seller;
 	});
 
@@ -20,8 +19,6 @@ function EditSellerController($scope, $location, $routeParams, AppResource, cent
 			category: $scope.seller.category,
 			imagePath: $scope.seller.imagePath
 		};
-		console.log(updatedSeller_obj);
-		console.log(typeof updatedSeller_obj.name);
 		if(updatedSeller_obj.name === ""){
 			centrisNotify.error("editseller.Messages.MissingName", "æjæj");
 		} else if(updatedSeller_obj.category === ""){

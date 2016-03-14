@@ -4,11 +4,9 @@ angular.module("project3App").controller("AddNewProductController",
 function AddNewProductController($scope, $location, $routeParams,AppResource, centrisNotify) {
 	
 	var product_obj;
-	console.log($routeParams.sellerid);
 	var sellerid = $routeParams.sellerid;
 
 	$scope.addProduct = function addproduct(){
-		console.log("product added");
 		product_obj = {
 			productName: $scope.productName,
 			price: $scope.price,
@@ -16,7 +14,6 @@ function AddNewProductController($scope, $location, $routeParams,AppResource, ce
 			quantityInStock: $scope.quantityInStock,
 			imagePath: $scope.imagePath
 		};
-		console.log("HEEEEEEEEE",product_obj);
 		if(typeof product_obj.productName === "undefined"){
 			centrisNotify.error("product.Messages.MissingAName");
 		} else if(typeof product_obj.price === "undefined"){
