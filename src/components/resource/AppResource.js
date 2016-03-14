@@ -11,7 +11,6 @@ function AppResource() {
 	// Note that this is only a helper to generate
 	// mock data, and is not a part of our business logic!
 	function createSeller(id, name, category, img) {
-		console.log('create seller1');
 		return {
 			id: id,
 			name: name,
@@ -136,9 +135,7 @@ function AppResource() {
 		getSellerDetails: function(id) {
 			var seller;
 			for (var i = 0; i < mockSellers.length; ++i) {
-				console.log(typeof(mockSellers[i].id));
 				if (mockSellers[i].id === parseInt(id)) {
-					console.log('break');
 					seller = mockSellers[i];
 					break;
 				}
@@ -183,13 +180,11 @@ function AppResource() {
 			if (mockResource.successUpdateSellerProduct) {
 				var current = _.find(mockProducts, function(o){ return o.product.id === id;});
 				if (current !== null) {
-					console.log(current);
 					current.product.productName    	= product.productName;
 					current.product.price        	= product.price;
 					current.product.quantitySold 	= product.quantitySold;
 					current.product.quantityInStock = product.quantityInStock;
 					current.product.imagePath 		= product.imagePath;
-					console.log(current);
 				}
 			}
 			return mockHttpPromise(mockResource.successUpdateSellerProduct, product);

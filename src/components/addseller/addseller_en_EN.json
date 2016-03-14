@@ -5,6 +5,7 @@
 		"ImagePath":              "Image Url",
 		"AddSeller":              "Add Seller",
 		"Back":                   "Back",
+		"Error":                  "Something went wrong",
 		"Messages" : {
 			"Success" : "Succesfully added seller",
 			"MissingName": "Failed to add seller. Is name missing?",

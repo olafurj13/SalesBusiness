@@ -1,12 +1,16 @@
 "use strict";
 
 angular.module("project3App").controller("SellerController",
-function SellerController($scope, $location, $routeParams, AppResource) {
+function SellerController($scope, $location, $translate, $routeParams, AppResource) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
+	//console.log("Andri" ,$translate.use());
+	
+
 	$scope.seller = "";
 	$scope.products = "";
 	var sortProductSold = [];
+	var p = "";
 	var getSellerDetailsPromise = AppResource.getSellerDetails($routeParams.id);
 	getSellerDetailsPromise.success(function(seller){
 		$scope.seller = seller;
@@ -14,9 +18,17 @@ function SellerController($scope, $location, $routeParams, AppResource) {
 
 	var getSellerProductPromise = AppResource.getSellerProducts($routeParams.id);
 	getSellerProductPromise.success(function(products){
-		$scope.products = products;
+		p = products;
 		sortProductSold = products;
 	});
+
+	for(var i = 0; i < p.length; i++){
+		if(p[i].imagePath === ""){
+			p[i].imagePath = "http://www.cib.na.cnr.it/wp-content/uploads/2014/12/no-image.png";
+		}
+	}
+
+	$scope.products = p;
 
 	$scope.editSeller = function editSeller(){
 		$location.path("/seller/edit/" + $routeParams.id);

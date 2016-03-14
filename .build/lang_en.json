@@ -5,23 +5,12 @@
 		"ImagePath": "Image Url",
 		"AddSeller": "Add Seller",
 		"Back": "Back",
+		"Error": "Something went wrong",
 		"Messages": {
 			"Success": "Succesfully added seller",
 			"MissingName": "Failed to add seller. Is name missing?",
 			"MissingCategory": "Failed to add seller. Is category missing?",
 			"MissingImage": "Failed to add seller. Is image path missing?"
-		}
-	},
-	"editseller": {
-		"Name": "Name",
-		"Category": "Category",
-		"ImagePath": "Image Url",
-		"EditSeller": "Update Seller",
-		"Back": "Back",
-		"Messages": {
-			"MissingName": "Failed to update seller. Is name missing?",
-			"MissingCategory": "Failed to update seller. Is category missing?",
-			"MissingImage": "Failed to update seller. Is image path missing?"
 		}
 	},
 	"product": {
@@ -51,6 +40,19 @@
 			"MissingEQuantatySold": "Failed to update product. Is quantatySold missing?",
 			"MissingEQuantityInStock": "Failed to update product. Is quantityInStock missing?",
 			"MissingEImage": "Failed to update product. Is image path missing?"
+		}
+	},
+	"editseller": {
+		"Name": "Name",
+		"Category": "Category",
+		"ImagePath": "Image Url",
+		"EditSeller": "Update Seller",
+		"Back": "Back",
+		"Messages": {
+			"Success": "Succesfully updated seller",
+			"MissingName": "Failed to update seller. Is name missing?",
+			"MissingCategory": "Failed to update seller. Is category missing?",
+			"MissingImage": "Failed to update seller. Is image path missing?"
 		}
 	},
 	"sellers-detail": {

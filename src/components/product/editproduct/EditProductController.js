@@ -10,9 +10,6 @@ function EditProductController($scope, $location, $routeParams, AppResource, cen
 	getSellerProductPromise.success(function(products){
 		var p = _.find(products, function(o){ return parseInt(o.id) === parseInt(productID);});
 		$scope.products = p;
-
-			
-		
 	});
 	
 	$scope.editProduct = function editProduct(){
@@ -28,8 +25,8 @@ function EditProductController($scope, $location, $routeParams, AppResource, cen
 			centrisNotify.error("product.Messages.MissingEImage");
 		} else {
 			AppResource.updateProduct($scope.products.id, $scope.products).success(function(p){
-			centrisNotify.success("product.Messages.SuccessE");
-			$location.path("/seller/" + $routeParams.sellerid);
+				centrisNotify.success("product.Messages.SuccessE");
+				$location.path("/seller/" + $routeParams.sellerid);
 			});
 		}
 	};

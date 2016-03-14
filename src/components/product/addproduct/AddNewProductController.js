@@ -28,7 +28,6 @@ function AddNewProductController($scope, $location, $routeParams,AppResource, ce
 			AppResource.addSellerProduct(sellerid, product_obj).success(function(product){
 				centrisNotify.success("product.Messages.SuccessA");
 				$location.path("/seller/" + sellerid);
-				console.log("success");
 			});
 		}
 	};
